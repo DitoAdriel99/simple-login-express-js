@@ -1,0 +1,12 @@
+{
+    "dev": {
+      "driver": "mysql",
+      "host": "localhost",
+      "port": 3307,
+      "user": "sqluser",
+      "password": "password",
+      "database": "test_api",
+      "multipleStatements": true
+    }
+}
+  

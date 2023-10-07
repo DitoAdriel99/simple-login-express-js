@@ -10,6 +10,8 @@ COPY package*.json ./
 # Install dependencies
 RUN npm install
 
+RUN npx db-migrate up
+
 # Copy all source files to the working directory
 COPY . .
 
