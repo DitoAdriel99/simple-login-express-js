@@ -8,7 +8,7 @@ WORKDIR /app
 COPY package*.json ./
 
 # Install dependencies
-RUN npm install nodemon node-db-migrate -g
+RUN npm install nodemon db-migrate db-migrate-mysql -g
 
 RUN npm install
 
