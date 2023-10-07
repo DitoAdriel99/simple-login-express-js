@@ -1,8 +1,8 @@
 # Use the official Node.js image as the base image
-FROM node:14
+FROM node:14-alpine
 
 # Set the working directory in the container
-WORKDIR /app
+WORKDIR /home/node/app
 
 # Copy package.json and package-lock.json to the working directory
 COPY package*.json ./
@@ -15,8 +15,8 @@ RUN npm install
 # Copy all source files to the working directory
 COPY . .
 
-# Expose the port the app runs on
-EXPOSE 6666
+# Change startup script permission to be excutable
+RUN chmod +x startup.sh
 
 # Command to start the application
-CMD ["nodemon", "index.js"]
+CMD ["sh", "-c", "/home/node/app/startup.sh"]
