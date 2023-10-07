@@ -8,9 +8,9 @@ WORKDIR /app
 COPY package*.json ./
 
 # Install dependencies
-RUN npm install
+RUN npm install nodemon node-db-migrate -g
 
-RUN npx db-migrate up
+RUN npm install
 
 # Copy all source files to the working directory
 COPY . .
@@ -19,4 +19,4 @@ COPY . .
 EXPOSE 6666
 
 # Command to start the application
-CMD ["node", "app.js"]
+CMD ["nodemon", "index.js"]
