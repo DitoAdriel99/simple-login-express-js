@@ -19,6 +19,7 @@ RUN npm install
 COPY . .
 
 # Make it excutable
+RUN chmod +x startup.sh
 RUN chmod +x wait-for-it.sh
 
 # Command to start the application
