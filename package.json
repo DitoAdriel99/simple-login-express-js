@@ -5,6 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "migrate-up": "npx db-migrate up",
+    "migrate-down": "npx db-migrate down",
     "start": "nodemon index.js"
   },
   "author": "",

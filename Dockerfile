@@ -1,6 +1,9 @@
 # Use the official Node.js image as the base image
 FROM node:14-alpine
 
+# Add bash shell for run wait-for-it.sh script
+RUN apk add --no-cache bash
+
 # Set the working directory in the container
 WORKDIR /home/node/app
 
@@ -15,8 +18,8 @@ RUN npm install
 # Copy all source files to the working directory
 COPY . .
 
-# Change startup script permission to be excutable
-RUN chmod +x startup.sh
+# Make it excutable
+RUN chmod +x wait-for-it.sh
 
 # Command to start the application
 CMD ["sh", "-c", "/home/node/app/startup.sh"]

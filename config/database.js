@@ -1,8 +1,8 @@
 let mysql = require('mysql');
  
 let connection = mysql.createConnection({
-   host:        'localhost',
-   port:        3307,
+   host:        'database',
+   port:        3306,
    user:        'sqluser',
    password:    'password',
    database:    'test_api'
