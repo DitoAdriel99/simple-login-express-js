@@ -7,7 +7,7 @@
 ## Tech Specifications
 ### Libraries/Frameworks Used
 
-- NodeJs (version 17)
+- NodeJs (version 14)
 - ExpressJS
 - MySQL
 
